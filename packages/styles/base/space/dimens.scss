@@ -1,0 +1,36 @@
+.vn-full-width {
+	width: 100%;
+}
+
+.vn-no-overflow {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.vn-full-screen {
+	height: 100vh !important;
+	width: 100vh !important;
+}
+
+.vn-full-screen-height {
+	min-height: 100vh;
+}
+
+.vn-overflow-x {
+	max-width: 100%;
+	overflow-x: hidden;
+
+	&:hover {
+		overflow-x: auto;
+	}
+}
+
+@each $dimen in (40 50 100 150 200 250) {
+	.vn-min-width-#{$dimen} {
+		min-width: #{$dimen}px !important;
+	}
+
+	.vn-max-width-#{$dimen} {
+		max-width: #{$dimen}px !important;
+	}
+}

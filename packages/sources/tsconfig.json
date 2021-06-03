@@ -1,0 +1,25 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+        "rootDir": "src",
+        "paths": {
+            "src/*": ["./src/*"],
+            "@vdtn359/news-utils": ["../utils/src"],
+            "@vdtn359/news-models": ["../models/src"]
+        }
+    },
+    "references": [
+        {
+            "path": "../models/tsconfig.build.json"
+        },
+        {
+            "path": "../utils/tsconfig.build.json"
+        }
+    ],
+    "include": ["src"]
+}

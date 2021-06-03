@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#extractNews should strip style and css and data attributes 1`] = `
+"LATEST UPDATES
+ 
+11.52pm on Mar 28, 2020MAYORAL RACES: WHAT WE KNOW SO FAR
+The Electoral Commission of Queensland has stopped the count, with only the unofficial preliminary results publicly available so far.
+
+Here is where we end tonight in key mayoral races.
+
+BRISBANE: (14.3 per cent counted) Lord mayor Adrian Schrinner on 43.47 per cent, Labor candidate Patrick Condren on 30.93 per cent, and Greens candidate Kath Angus on 18.09 per cent.
+
+GOLD COAST: (16.67 per cent counted) Mayor Tom Tate on 54.70 per cent and Mona Hecke on 21.59 per cent.
+
+IPSWICH: (1.34 per cent counted)  Teresa Harding on 40.19 per cent and David Martin on 22.51 per cent.
+
+MORETON BAY: (1.06 per cent counted) Adrian Raedel on 25.88 per cent, Peter Flannery on 24.96 per cent, and Chris Thompson on 20.65 per cent.
+
+LOGAN: Only 0.05 per cent of the count is displaying.
+
+And that's a wrap. The commission will continue the vote count tomorrow and Brisbane Times will have comprehensive coverage of the results.
+
+
+
+More 
+11.34pm on Mar 28, 2020TECHNICAL ISSUES DELAY RESULTS OF CONTROVERSIAL COUNCIL ELECTIONS
+After one of the most unusual council campaigns in Queensland's history - if not Australia's - voters went to the polls today to decide who would lead them through the next four years.
+
+An election official uses sanitiser at the Brisbane City Hall polling booth. [https://static.ffx.io/images/$zoom_0.201%2C$multiply_0.3541%2C$ratio_1.776846%2C$width_1059%2C$x_0%2C$y_84/t_crop_custom/q_86%2Cf_auto/af7b234fa6dccfed13201f857225799033382339]An election official uses sanitiser at the Brisbane City Hall polling booth. Credit: Jono Searle/Getty Images
+
+But by late tonight, for most councils that was still an unknown as the Electoral Commission of Queensland's preliminary vote inched forward slowly and technical issues with the ECQ's website caused headaches.
+
+Only small percentages for most votes were released by late Saturday night. Volunteers dealt not only with counting votes, but managing hygiene measures put in place to protect them during the coronavirus pandemic.
+
+Full story is here.
+[https://www.brisbanetimes.com.au/national/queensland/technical-issues-delay-results-of-controversial-council-elections-20200328-p54evl.html]"
+`;

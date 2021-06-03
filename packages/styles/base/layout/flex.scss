@@ -1,0 +1,89 @@
+.vn-flex {
+	display: flex !important;
+}
+
+.vn-flex-column {
+	flex-direction: column;
+}
+.vn-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.vn-flex-center {
+	align-items: center;
+}
+.vn-flex-baseline {
+	align-items: baseline;
+}
+.vn-flex-stretch {
+	align-items: stretch;
+}
+
+.vn-flex-float-right {
+	margin-left: auto;
+}
+
+.vn-flex-start {
+	align-items: flex-start;
+}
+.vn-flex-end {
+	align-items: flex-end;
+}
+
+.vn-flex-justify {
+	justify-content: space-between;
+}
+
+.vn-flex-justify-right {
+	justify-content: flex-end;
+}
+
+.vn-flex-justify-around {
+	justify-content: space-around;
+}
+
+.vn-flex-justify-center {
+	justify-content: center;
+}
+
+/*
+ * 1.vn- Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893
+ */
+
+.vn-flex-auto {
+	flex: 1 1 auto !important;
+	min-width: 0; /* 1 */
+	min-height: 0; /* 1 */
+}
+.vn-flex-grow {
+	flex: 1 0 auto;
+}
+.vn-flex-grow-equal {
+	flex: 1;
+}
+.vn-flex-none {
+	flex: none;
+}
+
+.vn-flex-first {
+	order: -1;
+}
+.vn-flex-last {
+	order: 99999;
+}
+
+.vn-flex-align-self-end {
+	align-self: flex-end;
+}
+
+@each $size in (sm md lg phone tablet laptop) {
+	@media (--breakpoint-#{$size}) {
+		.vn-#{$size}-flex {
+			display: flex;
+		}
+
+		.vn-#{$size}-flex-float-right {
+			margin-left: auto;
+		}
+	}
+}

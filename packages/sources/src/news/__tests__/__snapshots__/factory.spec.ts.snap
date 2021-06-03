@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#extractUrl parse news urls correctly 1`] = `
+"Prime Minister Scott Morrison has announced strict new isolation measures for those who have come home from abroad, which will be in place by Saturday at midnight, in a bid to slow the spread of 
+coronavirus [https://www.news.com.au/topics/coronavirus].
+
+“States and territories will be quarantining all arrivals through our airports in hotels and other accommodation facilities for the two weeks of their mandatory self-isolation before they are able to return to their home,” Mr Morrison said at a press conference in Canberra.
+
+“If their home is in South Australia or Perth or Tasmania and they’ve arrived in Melbourne, they will be quarantining in Melbourne.”
+
+Mr Morrison said the strict new measure was necessary given two-thirds of all confirmed cases of coronavirus in Australia are the result of Aussies coming home from overseas.
+
+And to ensure people remain in the hotels where they’re placed for 14 days, the Commonwealth will provide support by deploying the Australian Defence Force “to assist with compliance”, he said.
+
+RELATED: Follow the latest coronavirus updates [https://www.news.com.au/topics/coronavirus]
+
+Australians abroad continue to make their way home, but from Saturday, they’ll be made to spend 14 days in quarantine. [https://cdn.newsapi.com.au/image/v1/52041e416be2bf85e346cbc211245722?width=650]Australians abroad continue to make their way home, but from Saturday, they’ll be made to spend 14 days in quarantine.Source:News Corp Australia
+
+Scott Morrison announces strict new isolation measure. [https://cdn.newsapi.com.au/image/v1/4a40146267272922fb37fa28e17f2f35?width=650]Scott Morrison announces strict new isolation measure.Source:SKY
+
+The PM was at pains to stress that the military had not been authorised to prosecute people for breaches – that remains the responsibility of law enforcement agencies in each jurisdiction.
+
+“The ADF will be there to support those enforcement authorities. And so, we will be turning to the Defence Forces to support compliance with these new arrangements.
+
+“It will require cooperative and facilitative support, and I have no doubt the Forces will do that in the most sensitive way they can, but it is necessary.”
+
+For some time now, anyone arriving in Australia from overseas has been required to fill out an isolation declaration card, detailing where they will be self-isolating.
+
+“This is enforceable by law,” Mr Morrison said.
+
+There have reports of breaches of those self-isolation requirements and states and territories have stepped up their enforcement protocols.
+
+“If you have come back into Australia, you need to live up to this pledge and the state and territory governments are going to make sure you do.”
+
+But people were previously able to do that at home – something that ends tomorrow.
+
+RELATED: How flattening the curve saves lives
+[https://www.news.com.au/lifestyle/health/health-problems/coronavirus-simple-graph-shows-how-we-can-flatten-the-curve-and-lessen-the-disruption-caused-by-the-pandemic/news-story/6acd8c4c5c453e6138228b2ab2dde008]
+
+Australians returning from abroad will be forced into quarantine for 14 days. Picture: AAP [https://cdn.newsapi.com.au/image/v1/e3ce6b77471c731c547cbb9e767cf0a1?width=650]Australians returning from abroad will be forced into quarantine for 14 days. Picture: AAPSource:AAP
+
+“For those who are seeking to make their way back, know these arrangements will be in place and they are mandatory,” Mr Morrison said.
+
+“They should also know that it won't be before too long where we will be very difficult to get back do Australia.”
+
+In terms of the number of returning Australians likely to be quarantined, the PM said 7120 people arrived at airports across the country yesterday.
+
+The same new arrangement will apply to the Vasco da Gama cruise ship that’s currently off Perth, with a number of Australians on board.
+
+The West Australian Government plans to quarantine those passengers on Rottnest Island, which was this week cleared to make way for them next week.
+
+The Vasco de Gama cruise ship is currently off Perth. [https://cdn.newsapi.com.au/image/v1/5b4168363f01efa55f9d9dfd4d350f4e?width=650]The Vasco de Gama cruise ship is currently off Perth.Source:Getty Images
+
+Speaking in Melbourne this afternoon, Victorian Premier Daniel Andrews said it didn’t matter where Australians were returning from given coronavirus is “running so wildly rampant in a number of other countries”.
+
+“If you have been in international airports and are returning from anywhere, really, you are an unacceptable risk if we just let you go about your business,” Mr Andrews said.
+
+“You have got to quarantine, and we are now going to have a situation from midnight tomorrow night where you will not be quarantining at home on an honesty basis.
+
+“You will be quarantining with appropriate support at a hotel with everything, here in the CBD, in the suburbs or in regional areas, and we will make those arrangements as convenient as we can.
+
+“It is a big step to take away someone's liberty and make them go to a certain place and stay there for two weeks but this is life-and-death.”
+
+Between 1300 and 2000 people are arriving back into Melbourne each day and the Victorian Government has 5000 hotel rooms on standby.
+
+“We will do the work to step that up,” Mr Andrews said.
+
+“Those numbers (of arrival) will perhaps drop off in coming days but we have sufficient capacity and we have done the work early to be able to accommodate those people.
+
+“They will be housed, fed and transported at no cost to them but this is the best way to ensure absolute compliance.”
+
+Some 500 police officers are conducting self-isolation enforcement now for those who have arrived back in recent days and weeks to ensure people are where they should be. “So, if you are doing the wrong thing you will be caught.”
+
+Victorian Premier Daniel Andrews says the new quarantine measures as a matter of “life and death”. [https://cdn.newsapi.com.au/image/v1/3284e311e0160c11b8226931886d5530?width=650]Victorian Premier Daniel Andrews says the new quarantine measures as a matter of “life and death”.Source:News Corp Australia
+
+Chief Medical Officer Professor Brendan Murphy said health authorities are “worried” about the continued rapid growth in infection numbers, which today tipped over 3000.
+
+“But as the Prime Minister said we're in an almost unique situation in this country in that even now a substantial part of the new cases is returned travellers,” Professor Murphy said.
+
+“Our numbers have not been helped by a recent cruise ship, which has given lots of cases in Sydney. We are still seeing significant numbers of returned travellers with the virus developing an infection and, in many cases, passing it on to their families.”
+
+It’s critical to “stop the capacity” for any returning travellers to spread coronavirus, Professor Murphy.
+
+“We would look after them when they get the virus, as some will do, as they continue to come home, coming from countries now that have large outbreaks, so the risk is getting higher and higher as the number of flights reduce, but the risk in those countries increase.
+
+“ This is a really important thing. But we are also worried about community transmission. That is the single most important concern for the health experts.”"
+`;

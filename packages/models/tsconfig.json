@@ -1,0 +1,21 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+        "rootDir": "src",
+        "paths": {
+            "src/*": ["./src/*"],
+            "@vdtn359/news-utils": ["../utils/src"]
+        }
+    },
+    "references": [
+        {
+            "path": "../utils/tsconfig.build.json"
+        }
+    ],
+    "include": ["src"]
+}

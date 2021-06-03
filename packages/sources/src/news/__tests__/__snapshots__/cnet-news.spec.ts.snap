@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#extractNews should strip style and css and data attributes 1`] = `""`;

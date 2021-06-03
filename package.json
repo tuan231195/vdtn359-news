@@ -1,0 +1,69 @@
+{
+    "name": "@vdtn359/news",
+    "version": "0.0.0",
+    "private": true,
+    "description": "simple news",
+    "license": "ISC",
+    "author": "Tuan Nguyen <vdtn359@gmail.com>",
+    "repository": {
+        "url": "https://github.com/tuan231195/vdtn359-news"
+    },
+    "scripts": {
+        "build": "echo 'skip build'",
+        "cli": "node ./taskfile.js",
+        "prepare": "pnpm run cli -- buildPackages",
+        "postinstall": "pnpm run cli -- postInstall"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "**/*.{json,html,css}": [
+            "prettier --write"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@types/cheerio": "0.22.18",
+        "@types/jest": "25.1.4",
+        "@types/lodash": "4.14.150",
+        "@types/node": "13.13.5",
+        "@types/react": "16.9.34",
+        "@typescript-eslint/eslint-plugin": "2.32.0",
+        "@typescript-eslint/parser": "2.32.0",
+        "@zerollup/ts-transform-paths": "1.7.12",
+        "chokidar-cli": "^2.1.0",
+        "commitizen": "4.0.3",
+        "cz-conventional-changelog": "3.2.0",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "eslint-plugin-react": "7.19.0",
+        "husky": "4.2.3",
+        "jest": "26.1.0",
+        "link-parent-bin": "1.0.2",
+        "lint-staged": "10.2.11",
+        "next-compose-plugins": "2.2.0",
+        "prettier": "2.0.2",
+        "semantic-release": "17.1.1",
+        "tasksfile": "5.1.1",
+        "ts-jest": "25.2.1",
+        "ts-transpile": "1.2.4",
+        "tsconfig-paths": "3.9.0",
+        "ttypescript": "1.5.10",
+        "typescript": "3.9.6"
+    }
+}

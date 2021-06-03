@@ -1,0 +1,27 @@
+.vn-align-center {
+	text-align: center;
+}
+
+.vn-align-right {
+	text-align: right;
+}
+
+.vn-align-baseline {
+	vertical-align: baseline;
+}
+.vn-align-top {
+	vertical-align: top;
+}
+.vn-align-middle {
+	vertical-align: middle;
+}
+.vn-align-bottom {
+	vertical-align: bottom;
+}
+
+.vn-no-scrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+}

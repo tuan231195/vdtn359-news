@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#extractNews should strip style and css and data attributes 1`] = `
+"
+
+        
+                                                                                    
+                        
+
+                    
+
+                        
+    
+    
+
+
+        
+
+        
+
+            
+
+            
+
+            
+
+                
+
+                                            
+[https://tr1.cbsistatic.com/hub/i/r/2020/03/05/b1b4f0cd-0452-48f5-886c-d3afe0a743dd/thumbnail/768x432/e6bcdbfcb4c323d94684c40802a0e53a/20200304-larry-bill-coronavirus.jpg]
+                    
+                    
+
+                
+
+                
+
+                    
+
+    
+        
+    
+    
+        
+            
+                
+                
+                
+                    
+                        
+                    
+                    
+                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        
+    
+
+
+                    
+The coronavirus could make remote work the norm, what businesses need to know
+
+                                        
+                    
+
+                        
+Watch Now
+                    
+
+                
+
+            
+
+        
+
+    
+
+    
+
+
+
+
+
+    
+
+
+As employees move to remote work because of the coronavirus
+[https://www.techrepublic.com/article/how-covid-19-is-disrupting-the-enterprise-and-what-you-can-do-about-it/] pandemic, the only way they can be supported is with remote tech support. Organizations built on a physical location model suddenly have a massive increase in demand, and may need to provide that support from their own home offices, where they may lack tools, policy, and procedure to be effective. These problems are not new, but they did quickly become a lot more relevant. Support.com has been working on solving them since the previous century, and they are hiring. I spoke with Rick Bloom, the company's CEO, about the problem, where he sees the industry headed, and how IT can adapt. 
+
+
+    
+        
+
+                            
+MORE FOR CXOS
+
+                
+ * COVID-19: What to do if you're considering a job change
+   [https://www.techrepublic.com/videos/covid-19-what-to-do-if-youre-considering-a-job-change/]
+ * PMI offers free project management courses during COVID-19 quarantines
+   [https://www.techrepublic.com/article/pmi-offers-free-project-management-courses-during-covid-19-quarantines/]
+ * Coronavirus: Critical IT policies and tools every business needs
+   [https://www.techrepublic.com/article/coronavirus-critical-it-policies-and-tools-every-business-needs/]
+ * Virtual hiring tips for job seekers and recruiters (free PDF)
+   [https://www.techrepublic.com/resource-library/whitepapers/virtual-hiring-tips-for-job-seekers-and-recruiters-free-pdf/]
+
+
+    
+
+
+Bloom started by getting broad—he talked about the call center industry. Most of us are familiar with the experience of calling an 800 number to get support for our credit card, or bank. What we may not realize, according to Bloom, is what those support centers look like. His experience matches my own, with buildings with hundreds to perhaps a thousand people, sitting at tiny cubicles, perhaps a foot and a half from each other. Thanks to coronavirus, those offices are largely shut down, which leaves no support for the people who need it most—the newly telecommuting. 
+
+SEE: Coronavirus: Critical IT policies and tools every business needs
+[https://www.techrepublic.com/article/coronavirus-critical-it-policies-and-tools-every-business-needs/] (TechRepublic Premium)
+
+ 	SUPPORTING TELECOMMUTERS 
+While the problem is wider in scope, Support.com decided early to focus on IT support. Bloom spoke of the \\"lost 300 feet of connectivity,\\" the space between the wireless router and the wireless printer, as a great gap. He recounted the same story many of us have experienced, of having the printer manufacturer point to the router, and the router manufacturer point back to the printer. Ultimately, the person stuck at home has to configure the hardware. That may not be a big problem when the people working from home were programmers, database administrators, and other IT professionals hired for their rare expertise. Today, that list includes the people in accounting, marketing, HR, legal, and customer service. 
+
+
+
+
+
+    
+
+
+        
+
+    
+
+
+
+As other organizations are looking to reduce costs, Support.com has seen unprecedented demand. So much so that the company created
+100 work-from-home jobs over the weekend
+[https://corporate.support.com/news/press-release/now-hiring-for-unlimited-remote-customer-support-roles.html/]. With 1,200 employees, that represents about an 8% bump in employee count in one week—without a clear end in sight. 
+
+ 	FOCUSING ON REMOTE IT SUPPORT 
+	
+
+
+        
+
+    
+
+
+
+&nbsp;
+ While basic call-center technology is simple, Bloom explained that the skill, barriers to entry, and technical requirements for technology are more complex. The company decided to make the investment and specialize. As a result, they've had to overcome problems that companies that stayed all-on-site are dealing with right now. 
+
+&nbsp;\\"We have the infrastructure to recruit, hire, train remotely because we've been doing it for 20 years,\\" he said, which could be why some new customers are considering converting their employees to Support.com employees. Others are using Support.com for overflow work, or to enable 24/7 support. Smaller businesses, that may have had a part-time service person, are simply opting to use Support.com on an as-needed basis. 
+
+One surprising fact about Support.com's hiring is that every position is in the United States. Bloom explains the trend he sees is that in a quest to reduce cost, American companies took work offshore. The complex work, like remote IT support, was just to differentiated to be successful there, and so it moved near, then back on-shore. He sees this as a trend, which the coronavirus issues will only accelerate.&nbsp; 
+
+While his positions are based on the US, the company is now only hiring in 39 states. While other internet companies move into markets and worry about regulations later, Support.com takes a more careful approach, understanding the tax, payroll, and legal implications of work from home in each jurisdiction. All positions are employee, with benefits. Surprisingly, the company is allowing split schedules, where some people work in an early morning and an evening shift. Bloom said \\"that can support child care or a more balanced lifestyle,\\" and also mentioned a part-time option.&nbsp; 
+
+We ran the interview over Zoom [https://www.techrepublic.com/article/zoom-as-the-go-to-video-conferencing-option-for-remote-work/], which seems to be the standard for teleconferences.&nbsp; 
+
+I'm glad everything worked. 
+
+If it hadn't, I would need support, but that person would probably need to debug the issue, and would likely want to use a screen share to do it, such as … Zoom. 
+
+This is, indeed, a complex issue. 
+
+For some people it will be a problem.&nbsp; 
+
+For others it could be an opportunity. 
+
+
+            
+ALSO SEE
+ * The latest cancellations: How the coronavirus is disrupting tech conferences worldwide
+   [https://www.techrepublic.com/article/facebook-cancels-f8-how-the-coronavirus-is-disrupting-tech-conferences-worldwide/] (TechRepublic)
+ * The tech pro's guide to video conferencing
+   [https://www.techrepublic.com/resource-library/whitepapers/the-tech-pro-s-guide-to-video-conferencing-free-pdf/] (TechRepublic download)
+ * Coronavirus: Critical IT policies and tools every business needs
+   [https://www.techrepublic.com/article/coronavirus-critical-it-policies-and-tools-every-business-needs/] (TechRepublic Premium)
+ * Coronavirus domain names are the latest hacker trick
+   [https://www.techrepublic.com/article/coronavirus-domain-names-are-the-latest-hacker-trick/] (TechRepublic Premium)
+ * As coronavirus spreads, here's what's been canceled or closed
+   [https://www.cbsnews.com/news/coronavirus-fears-lead-to-mass-cancellations-and-closures/] (CBS News)
+ * Coronavirus: Effective strategies and tools for remote work during a pandemic
+   [https://www.zdnet.com/article/effective-strategies-and-tools-for-remote-work-during-coronavirus/] (ZDNet)
+ * How to track the coronavirus: Dashboard delivers real-time view of the deadly virus
+   [https://www.zdnet.com/article/how-to-track-the-coronavirus-dashboard-delivers-real-time-view-of-the-deadly-virus/] (ZDNet)
+ * Coronavirus and COVID-19: All your questions answered
+   [https://www.cnet.com/news/coronavirus-and-covid-19-all-your-questions-answered/] (CNET)
+ * Coronavirus: More must-read coverage
+   [https://flipboard.com/@techrepublic/coronavirus-what-business-pros-needs-to-know-jurtmat8y] (TechRepublic on Flipboard)
+
+techsupportistock-918046422bojan89.jpgtechsupportistock-918046422bojan89.jpg [https://tr1.cbsistatic.com/hub/i/r/2018/11/09/414d6427-25cc-4366-8e76-819d0c6c602d/resize/770x/98e8d81a6da1c98e086cc284b11b49b4/techsupportistock-918046422bojan89.jpg]
+
+
+                                            Image: Bojan89, Getty Images/iStockphoto"
+`;

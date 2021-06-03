@@ -1,0 +1,16 @@
+{
+    "name": "@vdtn359/news-models",
+    "version": "1.1.1",
+    "description": "news model",
+    "type": "dist/index.d.ts",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "ttsc -b tsconfig.build.json"
+    },
+    "dependencies": {
+        "@vdtn359/news-utils": "1.1.1"
+    }
+}

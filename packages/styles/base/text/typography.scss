@@ -1,0 +1,76 @@
+.vn-font-family-inherit {
+	font-family: inherit;
+}
+.vn-font-size-inherit {
+	font-size: inherit;
+}
+.vn-text-decoration-none {
+	text-decoration: none;
+}
+
+.vn-bold {
+	font-weight: var(--bold-font-weight, bold);
+}
+.vn-regular {
+	font-weight: normal;
+}
+.vn-italic {
+	font-style: italic;
+}
+.vn-caps {
+	text-transform: uppercase;
+	letter-spacing: var(--caps-letter-spacing);
+}
+
+.vn-left-align {
+	text-align: left;
+}
+
+.vn-center {
+	text-align: center;
+}
+.vn-right-align {
+	text-align: right;
+}
+.vn-justify {
+	text-align: justify;
+}
+
+.vn-nowrap {
+	white-space: nowrap;
+}
+.vn-break-word {
+	word-wrap: break-word;
+}
+
+.vn-line-height-1 {
+	line-height: var(--line-height-1);
+}
+.vn-line-height-2 {
+	line-height: var(--line-height-2);
+}
+.vn-line-height-3 {
+	line-height: var(--line-height-3);
+}
+.vn-line-height-4 {
+	line-height: var(--line-height-4);
+}
+
+.vn-list-style-none {
+	list-style: none;
+}
+.vn-underline {
+	text-decoration: underline;
+}
+
+.vn-truncate {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.vn-list-reset {
+	list-style: none;
+	padding-left: 0;
+}

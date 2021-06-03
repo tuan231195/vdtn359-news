@@ -1,0 +1,49 @@
+.vn-inline {
+	display: inline;
+}
+.vn-block {
+	display: block;
+}
+.vn-inline-block {
+	display: inline-block;
+}
+.vn-table {
+	display: table;
+}
+.vn-table-cell {
+	display: table-cell;
+}
+
+.vn-overflow-hidden {
+	overflow: hidden;
+}
+.vn-overflow-scroll {
+	overflow: scroll;
+}
+.vn-overflow-auto {
+	overflow: auto;
+}
+
+.vn-clearfix:before,
+.vn-clearfix:after {
+	content: ' ';
+	display: table;
+}
+.vn-clearfix:after {
+	clear: both;
+}
+
+.vn-left {
+	float: left;
+}
+.vn-right {
+	float: right;
+}
+
+.vn-fit {
+	max-width: 100%;
+}
+
+.vn-border-box {
+	box-sizing: border-box;
+}

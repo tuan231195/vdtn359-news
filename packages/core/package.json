@@ -1,0 +1,22 @@
+{
+    "name": "@vdtn359/news-core",
+    "version": "1.2.2",
+    "description": "news core",
+    "type": "dist/index.d.ts",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "ttsc -b tsconfig.build.json"
+    },
+    "dependencies": {
+        "@vdtn359/news-utils": "1.1.1",
+        "rxjs": "6.5.5",
+        "winston": "3.2.1",
+        "winston-logzio": "5.0.4"
+    },
+    "devDependencies": {
+        "ts-node": "8.10.2"
+    }
+}

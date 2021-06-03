@@ -1,0 +1,8 @@
+{
+    "name": "@vdtn359/news-styles",
+    "version": "1.2.0",
+    "description": "news styles",
+    "scripts": {
+        "build": "echo 'skip build'"
+    }
+}

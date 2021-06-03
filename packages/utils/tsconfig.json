@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "baseUrl": ".",
+        "outDir": "dist",
+        "rootDir": "src",
+        "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+        "paths": {
+            "src/*": ["./src/*"]
+        }
+    },
+    "exclude": ["src/**/*.spec.ts"],
+    "include": ["src/**/*"]
+}

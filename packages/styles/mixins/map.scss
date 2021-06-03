@@ -1,0 +1,11 @@
+@mixin map-modifiers($map, $attribute, $prefix: '-', $base: 'base') {
+	@each $key, $value in $map {
+		&#{if($key != $base, #{$prefix}#{$key}, '')} {
+			@if type-of($value) == 'map' {
+				@include map-modifiers($value, $attribute, '-', $base);
+			} @else {
+				#{$attribute}: $value;
+			}
+		}
+	}
+}

@@ -1,0 +1,3 @@
+@function get($map, $key, $modifier: 'base') {
+	@return map-get(map-get($map, $key), $modifier);
+}

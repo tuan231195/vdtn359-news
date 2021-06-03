@@ -1,0 +1,28 @@
+{
+    "name": "@vdtn359/news-schema",
+    "version": "1.2.2",
+    "description": "news schema",
+    "type": "dist/index.d.ts",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "ttsc -b tsconfig.build.json"
+    },
+    "dependencies": {
+        "@vdtn359/news-core": "1.2.2",
+        "@vdtn359/news-models": "1.1.1",
+        "@vdtn359/news-utils": "1.1.1",
+        "date-fns": "2.13.0",
+        "firebase-admin": "8.10.0",
+        "ioredis": "4.16.3",
+        "lodash": "4.17.15",
+        "reflect-metadata": "0.1.13",
+        "rxjs": "6.5.5"
+    },
+    "devDependencies": {
+        "@types/bluebird": "3.5.30",
+        "@types/ioredis": "4.16.1"
+    }
+}

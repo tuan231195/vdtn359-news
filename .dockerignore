@@ -1,0 +1,9 @@
+**/.git
+**/.DS_Store
+**/node_modules
+**/coverage
+**/logs
+**/.idea
+**/Dockerfile
+**/.terraform
+**/Dockerfile

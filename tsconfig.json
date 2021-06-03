@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "preserveWatchOutput": true,
+        "module": "CommonJS",
+        "target": "es6",
+        "lib": ["dom", "esnext"],
+        "declaration": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "downlevelIteration": true,
+        "noImplicitAny": false,
+        "strict": true,
+        "strictNullChecks": false,
+        "strictPropertyInitialization": false,
+        "sourceMap": true,
+        "plugins": [
+            {
+                "transform": "@zerollup/ts-transform-paths",
+                "exclude": ["@vdtn359/*"]
+            },
+            {
+                "transform": "@zerollup/ts-transform-paths",
+                "exclude": ["@vdtn359/*"],
+                "afterDeclarations": true
+            }
+        ]
+    }
+}

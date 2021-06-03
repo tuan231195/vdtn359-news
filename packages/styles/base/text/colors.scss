@@ -1,0 +1,41 @@
+$colors: (
+	'white': (
+		base: #fff,
+	),
+	'black': (
+		base: #000,
+	),
+	'primary': (
+		base: #0288d1,
+	),
+	'grey': (
+		base: #ccc,
+		dark: #777,
+	),
+);
+
+.vn-bg {
+	@include map-modifiers($colors, 'background-color', '--');
+}
+
+.vn-text {
+	@include map-modifiers($colors, 'color', '--');
+}
+
+@mixin raw-link {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+.vn-raw-link {
+	@include raw-link;
+}
+
+.vn-raw-link-center {
+	@include raw-link;
+	display: flex;
+	align-items: center;
+}
