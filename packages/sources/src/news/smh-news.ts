@@ -1,7 +1,7 @@
 import { DefaultNews } from 'src/news/default-news';
 import { CATEGORY } from '@vdtn359/news-models';
 import { axios, getCleanedHTML, resolveLazyLoadedImage } from 'src/news/utils';
-import Cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import { arr } from '@vdtn359/news-utils';
 
 export class SmhNews extends DefaultNews {
@@ -13,7 +13,7 @@ export class SmhNews extends DefaultNews {
 
 	static async extractUrl(url: string) {
 		const newsPage = await axios(url).then(({ data }) => data);
-		const $ = Cheerio.load(newsPage);
+		const $ = cheerio.load(newsPage);
 		const contentSelectors = [
 			'#content > div > div > article > div > div:nth-child(1) > div:nth-child(2)',
 			'#content > div > article > section > div',
@@ -32,7 +32,7 @@ export class SmhNews extends DefaultNews {
 			articleBody.find(section).remove();
 		});
 		articleBody = resolveLazyLoadedImage($, articleBody);
-		const storyContent = Cheerio.html(articleBody);
+		const storyContent = cheerio.html(articleBody);
 		return getCleanedHTML(storyContent);
 	}
 }

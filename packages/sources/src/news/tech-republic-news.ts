@@ -1,7 +1,7 @@
 import { DefaultNews } from 'src/news/default-news';
 import { CATEGORY } from '@vdtn359/news-models';
 import { axios, getCleanedHTML, resolveLazyLoadedImage } from 'src/news/utils';
-import Cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 
 export class TechRepublicNews extends DefaultNews {
 	static url = 'www.techrepublic.com';
@@ -12,14 +12,14 @@ export class TechRepublicNews extends DefaultNews {
 
 	static async extractUrl(url: string) {
 		const newsPage = await axios(url).then(({ data }) => data);
-		const $ = Cheerio.load(newsPage);
+		const $ = cheerio.load(newsPage);
 		let articleBody = $('article.article-single > div.content');
 		const toRemove = ['[data-component="newsletterSubscription"]'];
 		toRemove.forEach((section) => {
 			articleBody.find(section).remove();
 		});
 		articleBody = resolveLazyLoadedImage($, articleBody);
-		const storyContent = Cheerio.html(articleBody);
+		const storyContent = cheerio.html(articleBody);
 		return getCleanedHTML(storyContent);
 	}
 }

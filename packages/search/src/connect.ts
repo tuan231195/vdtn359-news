@@ -11,9 +11,11 @@ export function connectToEs(options: ClientOptions): Elasticsearch {
 export function connectToEsUsingConfig(config) {
 	return connectToEs({
 		node: config.get('es.host'),
-		auth: {
-			username: config.get('es.username'),
-			password: config.get('es.password'),
-		},
+		auth: config.get('es.username')
+			? {
+					username: config.get('es.username'),
+					password: config.get('es.password'),
+			  }
+			: undefined,
 	});
 }

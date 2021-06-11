@@ -2,11 +2,11 @@ import { DB, DBWrapper } from 'src/db';
 import { proxy } from '@vdtn359/news-utils';
 import firebase from 'firebase-admin';
 
-export type ConnectDBOptions = {
+export interface ConnectDBOptions {
 	clientEmail: string;
 	privateKey: string;
 	projectId: string;
-};
+}
 
 export function connectDB({
 	clientEmail,

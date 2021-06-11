@@ -1,0 +1,43 @@
+{
+    "name": "@vdtn359/news-worker",
+    "version": "1.2.3",
+    "private": true,
+    "description": "News worker",
+    "scripts": {
+        "build": "ttsc -P tsconfig.build.json",
+        "start:dev": "run-p dev:*",
+        "dev:news": "ts-node -C ttypescript -T --require tsconfig-paths/register src/news-worker.ts",
+        "dev:stats": "ts-node -C ttypescript -T --require tsconfig-paths/register src/news-stats-worker.ts",
+        "script": "ts-node -C ttypescript -T --require tsconfig-paths/register",
+        "start": "run-p start:*",
+        "start:news": "node dist/news-worker",
+        "start:stats": "node dist/news-stats-worker"
+    },
+    "dependencies": {
+        "@sentry/node": "5.15.4",
+        "@vdtn359/news-core": "workspace:*",
+        "@vdtn359/news-models": "workspace:*",
+        "@vdtn359/news-schema": "workspace:*",
+        "@vdtn359/news-search": "workspace:*",
+        "@vdtn359/news-sources": "workspace:*",
+        "@vdtn359/news-utils": "workspace:*",
+        "config": "3.3.1",
+        "dotenv": "8.2.0",
+        "find-up": "4.1.0",
+        "ioredis": "4.16.3",
+        "npm-run-all": "4.1.5",
+        "rxjs": "6.5.5",
+        "source-map-support": "^0.5.19",
+        "winston": "3.2.1"
+    },
+    "devDependencies": {
+        "@types/config": "0.0.36",
+        "@types/ioredis": "4.16.1",
+        "@vdtn359/base-typescript": "workspace:*",
+        "@vdtn359/eslint-config": "workspace:*",
+        "@vdtn359/news": "workspace:*",
+        "ts-node": "8.10.2",
+        "ttypescript": "1.5.10",
+        "webpack": "4.42.1"
+    }
+}

@@ -1,0 +1,6 @@
+Sitemap: https://www.vdtn359.com/api/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

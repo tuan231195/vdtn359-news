@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 ansible_tags =
 
 ifeq ($(ansible_tags),)
@@ -7,6 +8,16 @@ else
 endif
 
 buildCI:
+	docker build -t vdtn359/news-ci -f Dockerfile.ci .
+
+copyManifest:
+	tar -cvzf manifest.tar.gz {apps,packages,tools}/*/package.json common/{config,scripts} package.json rush.json
+
+buildRoot: copyManifest
+	docker build -t vdtn359/news-root .
+	rm -rf manifest.tar.gz
+
+buildRoot:
 	docker build -t vdtn359/news-ci .
 
 buildPacker:
@@ -24,10 +35,10 @@ provisionHeroku:
 	terraform apply -auto-approve
 
 provisionCrawler:
-	cd app/crawler && ./deploy.sh
+	cd apps/crawler && ./deploy.sh
 
 provisionScheduler:
-	cd app/scheduler && ./deploy.sh
+	cd apps/scheduler && ./deploy.sh
 
 playbook:
 	cd infra/ansible && ansible-playbook -v main.yml $(ansible_opts)
@@ -36,10 +47,10 @@ pushCI: buildCI
 	docker push vdtn359/news-ci
 
 buildWorker:
-	cd app/worker && ./deploy.sh
+	cd apps/worker && ./deploy.sh
 
 buildWeb:
-	cd app/web && ./deploy.sh
+	cd apps/web && ./deploy.sh
 
 releaseWorker:
 	heroku container:release -a vdtn359-news worker

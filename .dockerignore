@@ -6,4 +6,7 @@
 **/.idea
 **/Dockerfile
 **/.terraform
-**/Dockerfile
+common/deploy/
+common/temp/
+common/autoinstallers/*/.npmrc
+**/.rush/temp/

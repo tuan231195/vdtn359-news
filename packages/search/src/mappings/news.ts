@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 export const mappings = {
 	properties: {
 		id: { type: 'keyword' },

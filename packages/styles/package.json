@@ -4,5 +4,9 @@
     "description": "news styles",
     "scripts": {
         "build": "echo 'skip build'"
+    },
+    "devDependencies": {
+        "@types/node": "~15.9.0",
+        "@types/jest": "~26.0.23"
     }
 }

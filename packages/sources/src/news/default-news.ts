@@ -7,6 +7,7 @@ import { parse } from 'date-fns';
 
 export abstract class DefaultNews implements News {
 	protected axios: AxiosInstance;
+
 	protected constructor(
 		protected readonly category: CATEGORY,
 		protected rssFeed: string
@@ -17,7 +18,7 @@ export abstract class DefaultNews implements News {
 	}
 
 	async extractFeeds(): Promise<NewsDto[]> {
-		const $: CheerioStatic = await getParsedXml(this.axios, this.rssFeed);
+		const $: cheerio.Root = await getParsedXml(this.axios, this.rssFeed);
 		return Array.from($('item')).map((node) => {
 			const element = $(node);
 			const url = element.find('> link').text().trim();
@@ -44,7 +45,7 @@ export abstract class DefaultNews implements News {
 		});
 	}
 
-	getImage(element: Cheerio): string | undefined {
+	getImage(element: cheerio.Cheerio): string | undefined {
 		const image = element.find('image');
 		return image.length ? image.find('url').text().trim() : undefined;
 	}

@@ -1,4 +1,3 @@
-import { getRawText } from 'src/news/utils';
 import { SmhNews } from 'src/news';
 
 describe.skip('#extractNews', () => {

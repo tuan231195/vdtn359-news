@@ -2,19 +2,26 @@
     "name": "@vdtn359/news-search",
     "version": "1.1.1",
     "description": "news search",
-    "type": "dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "main": "dist/index.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "ttsc -b tsconfig.build.json"
+        "build": "rimraf dist && ttsc -b tsconfig.build.json",
+        "dev": "ttsc -b tsconfig.build.json"
     },
     "dependencies": {
         "@elastic/elasticsearch": "7.6.1",
-        "@vdtn359/news-models": "1.1.1",
-        "@vdtn359/news-utils": "1.1.1",
+        "@vdtn359/news-models": "workspace:*",
+        "@vdtn359/news-utils": "workspace:*",
         "date-fns": "2.13.0",
         "lodash": "4.17.15"
+    },
+    "devDependencies": {
+        "@types/node": "~15.9.0",
+        "@types/jest": "~26.0.23",
+        "@vdtn359/base-typescript": "workspace:*",
+        "@vdtn359/eslint-config": "workspace:*"
     }
 }

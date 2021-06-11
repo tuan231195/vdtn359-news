@@ -1,0 +1,34 @@
+{
+    "name": "@vdtn359/news-crawler",
+    "version": "1.4.2",
+    "private": true,
+    "description": "news crawler",
+    "scripts": {
+        "build": "ttsc -p tsconfig.build.json && cp package.json dist/",
+        "prepackage": "npm run build",
+        "package": "rm -rf produles && mono-install --engine pnpm --install-dir produles --package-json ./package.json --package-lock ../../pnpm-lock.yaml --resolve -- --frozen-lockfile=false --prod && npm run zip",
+        "start": "ts-node -C ttypescript -T --require tsconfig-paths/register src/index.ts",
+        "zip": "cd produles && mkdir nodejs && mv node_modules nodejs/node_modules && zip -9 -r --symlinks --quiet nodejs.zip nodejs"
+    },
+    "dependencies": {
+        "@sentry/node": "5.15.4",
+        "@vdtn359/news-core": "workspace:*",
+        "@vdtn359/news-models": "workspace:*",
+        "@vdtn359/news-schema": "workspace:*",
+        "@vdtn359/news-sources": "workspace:*",
+        "@vdtn359/news-utils": "workspace:*",
+        "bottleneck": "2.19.5",
+        "config": "3.3.1",
+        "dotenv": "8.2.0",
+        "find-up": "4.1.0",
+        "rxjs": "6.5.5",
+        "source-map-support": "^0.5.19",
+        "winston": "3.2.1"
+    },
+    "devDependencies": {
+        "@types/config": "0.0.36",
+        "@vdtn359/base-typescript": "workspace:*",
+        "@vdtn359/eslint-config": "workspace:*",
+        "ts-node": "8.10.2"
+    }
+}

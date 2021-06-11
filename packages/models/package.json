@@ -2,15 +2,22 @@
     "name": "@vdtn359/news-models",
     "version": "1.1.1",
     "description": "news model",
-    "type": "dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "main": "dist/index.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "ttsc -b tsconfig.build.json"
+        "build": "rimraf dist && ttsc -b tsconfig.build.json",
+        "dev": "ttsc -b tsconfig.build.json"
     },
     "dependencies": {
-        "@vdtn359/news-utils": "1.1.1"
+        "@vdtn359/news-utils": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/node": "~15.9.0",
+        "@types/jest": "~26.0.23",
+        "@vdtn359/base-typescript": "workspace:*",
+        "@vdtn359/eslint-config": "workspace:*"
     }
 }

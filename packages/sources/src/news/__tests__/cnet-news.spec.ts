@@ -1,4 +1,4 @@
-import { CnetNews, getRawText } from 'src/news';
+import { CnetNews } from 'src/news';
 
 describe.skip('#extractNews', () => {
 	it('should strip style and css and data attributes', async () => {

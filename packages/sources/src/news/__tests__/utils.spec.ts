@@ -1,5 +1,5 @@
 import { getCleanedHTML, getRawText, getThumbnailUrl } from 'src/news/utils';
-import { AuNews, TechRepublicNews } from 'src/news';
+import { AuNews } from 'src/news';
 
 describe('#getCleanedHtml', () => {
 	it('should strip style and css', () => {
@@ -30,7 +30,8 @@ describe('#getThumbnailUrl', () => {
 describe('#getRawText', () => {
 	it('should return raw text', async () => {
 		const source = '<div><div>Text</div><p>Hello</p></div>';
-		expect(getRawText(source)).toEqual('Text\n' + 'Hello');
+		expect(getRawText(source)).toEqual(`Text
+Hello`);
 	});
 
 	it.skip('should process long text', async () => {

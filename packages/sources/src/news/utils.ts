@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import Cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import { JSDOM } from 'jsdom';
 import createDOMPurify from 'dompurify';
 import adapter from 'axios/lib/adapters/http';
@@ -20,7 +20,7 @@ export function getParsedXml(axios: AxiosInstance, url) {
 				'text/xml',
 			].includes(contentType)
 		) {
-			return Cheerio.load(data, {
+			return cheerio.load(data, {
 				xmlMode: true,
 			});
 		}
@@ -28,7 +28,10 @@ export function getParsedXml(axios: AxiosInstance, url) {
 	});
 }
 
-export function resolveLazyLoadedImage($: CheerioStatic, source: Cheerio) {
+export function resolveLazyLoadedImage(
+	$: cheerio.Root,
+	source: cheerio.Cheerio
+) {
 	source.find('img').each((index, element) => {
 		const dataSource = $(element).data('src');
 		const currentSource = $(element).attr('src');
@@ -47,7 +50,7 @@ export function getCleanedHTML(source) {
 }
 
 export function getThumbnailUrl(source) {
-	const $ = Cheerio.load(source);
+	const $ = cheerio.load(source);
 	return $('img').eq(0).attr('src');
 }
 

@@ -6,13 +6,22 @@ import { proxy } from '@vdtn359/news-utils';
 export class FsExtension {
 	constructor(private readonly fsPromise: PromisifyAll<typeof nodeFs>) {}
 
-	writeJSON(filePath, json, options = { encoding: 'utf8', prettify: true }) {
+	writeJSON(
+		filePath,
+		json,
+		options: { encoding?: BufferEncoding; prettify?: boolean } = {
+			encoding: 'utf8',
+			prettify: true,
+		}
+	) {
 		return this.fsPromise.writeFile(
 			filePath,
 			options.prettify
 				? JSON.stringify(json, null, 4)
 				: JSON.stringify(json),
-			options
+			{
+				encoding: options.encoding,
+			}
 		);
 	}
 }

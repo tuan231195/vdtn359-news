@@ -1,0 +1,8 @@
+{
+    "name": "@vdtn359/base-typescript",
+    "private": "true",
+    "version": "0.0.0",
+    "scripts": {
+        "build": "echo 'skip build'"
+    }
+}

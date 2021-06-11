@@ -1,6 +1,6 @@
 export function findMap(
 	arr,
-	mapFunction: Function,
+	mapFunction: (element: any) => any,
 	predicate: (element) => boolean = (element) => !!element
 ) {
 	for (const element of arr) {

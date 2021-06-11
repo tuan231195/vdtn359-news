@@ -2,24 +2,34 @@
     "name": "@vdtn359/news-sources",
     "version": "1.1.2",
     "description": "news sources",
-    "type": "dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "main": "dist/index.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "ttsc -b tsconfig.build.json"
+        "build": "rimraf dist && ttsc -b tsconfig.build.json",
+        "dev": "ttsc -b tsconfig.build.json",
+        "test": "jest"
     },
     "dependencies": {
-        "@vdtn359/news-models": "1.1.1",
-        "@vdtn359/news-utils": "1.1.1",
+        "@vdtn359/news-models": "workspace:*",
+        "@vdtn359/news-utils": "workspace:*",
         "axios": "0.19.2",
         "bottleneck": "2.19.5",
-        "cheerio": "1.0.0-rc.3",
+        "cheerio": "0.22.0",
         "date-fns": "2.13.0",
-        "dompurify": "2.0.8",
+        "dompurify": "^2.2.9",
         "html-to-text": "5.1.1",
-        "jsdom": "16.2.2",
+        "jsdom": "^16.6.0",
         "lodash": "4.17.15"
+    },
+    "devDependencies": {
+        "@types/cheerio": "^0.22.29",
+        "@types/jest": "~26.0.23",
+        "@types/jsdom": "^16.2.11",
+        "@types/node": "~15.9.0",
+        "@vdtn359/base-typescript": "workspace:*",
+        "@vdtn359/eslint-config": "workspace:*"
     }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import { Elasticsearch } from 'src/es';
 import { mappings as newsMappings } from 'src/mappings/news';
 import { mappings as newsStatsMappings } from 'src/mappings/news-stats';
