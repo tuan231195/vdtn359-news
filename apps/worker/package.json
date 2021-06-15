@@ -5,7 +5,7 @@
     "description": "News worker",
     "scripts": {
         "build": "ttsc -P tsconfig.build.json",
-        "start:dev": "run-p dev:*",
+        "dev:start": "run-p dev:*",
         "dev:news": "ts-node -C ttypescript -T --require tsconfig-paths/register src/news-worker.ts",
         "dev:stats": "ts-node -C ttypescript -T --require tsconfig-paths/register src/news-stats-worker.ts",
         "script": "ts-node -C ttypescript -T --require tsconfig-paths/register",
@@ -13,6 +13,10 @@
         "start:news": "node dist/news-worker",
         "start:stats": "node dist/news-stats-worker"
     },
+    "files": [
+        "package.json",
+        "dist"
+    ],
     "dependencies": {
         "@sentry/node": "5.15.4",
         "@vdtn359/news-core": "workspace:*",
@@ -35,7 +39,6 @@
         "@types/ioredis": "4.16.1",
         "@vdtn359/base-typescript": "workspace:*",
         "@vdtn359/eslint-config": "workspace:*",
-        "@vdtn359/news": "workspace:*",
         "ts-node": "8.10.2",
         "ttypescript": "1.5.10",
         "webpack": "4.42.1"

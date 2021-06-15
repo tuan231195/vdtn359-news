@@ -1,6 +1,15 @@
-FROM vdtn359/news-root AS build
+FROM vdtn359/news-prod
 
-COPY . /opt/root
-WORKDIR /opt/root
-RUN ./common/scripts/install-run-rush.js build -t @vdtn359/news-worker
-RUN ./common/scripts/install-run-rush.js deploy -p @vdtn359/news-worker
+ENV APP_DIR /opt
+
+WORKDIR "${APP_DIR}"
+
+COPY ["common/artifacts/news-worker.zip", "${APP_DIR}/"]
+
+RUN unzip -qo news-worker.zip && rm news-worker.zip
+
+WORKDIR "${APP_DIR}"/apps/worker
+
+ENV NODE_ENV production
+
+CMD ["npm", "start"]

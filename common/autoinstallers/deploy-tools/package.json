@@ -1,0 +1,8 @@
+{
+    "name": "deploy-tools",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@vdtn359/rush-deploy-utils": "latest"
+    }
+}

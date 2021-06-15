@@ -289,7 +289,6 @@ importers:
       '@types/ioredis': 4.16.1
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
-      '@vdtn359/news': workspace:*
       '@vdtn359/news-core': workspace:*
       '@vdtn359/news-models': workspace:*
       '@vdtn359/news-schema': workspace:*
@@ -328,7 +327,6 @@ importers:
       '@types/ioredis': 4.16.1
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
-      '@vdtn359/news': link:../..
       ts-node: 8.10.2
       ttypescript: 1.5.10_ts-node@8.10.2
       webpack: 4.42.1

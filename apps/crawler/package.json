@@ -10,6 +10,10 @@
         "start": "ts-node -C ttypescript -T --require tsconfig-paths/register src/index.ts",
         "zip": "cd produles && mkdir nodejs && mv node_modules nodejs/node_modules && zip -9 -r --symlinks --quiet nodejs.zip nodejs"
     },
+    "files": [
+        "dist",
+        "package.json"
+    ],
     "dependencies": {
         "@sentry/node": "5.15.4",
         "@vdtn359/news-core": "workspace:*",

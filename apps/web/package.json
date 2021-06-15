@@ -5,10 +5,14 @@
     "description": "news web application",
     "scripts": {
         "build": "next build",
-        "start:dev": "LOCAL=1 next dev",
+        "dev:start": "LOCAL=1 next dev",
         "start": "next start -p $PORT",
         "test": "jest"
     },
+    "files": [
+        ".next",
+        "package.json"
+    ],
     "dependencies": {
         "@fortawesome/fontawesome-free-webfonts": "1.0.9",
         "@sendgrid/mail": "7.0.0",

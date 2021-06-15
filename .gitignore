@@ -264,3 +264,4 @@ common/autoinstallers/*/.npmrc
 
 # Common toolchain intermediate files
 temp
+common/artifacts

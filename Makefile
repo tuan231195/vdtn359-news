@@ -10,15 +10,8 @@ endif
 buildCI:
 	docker build -t vdtn359/news-ci -f Dockerfile.ci .
 
-copyManifest:
-	tar -cvzf manifest.tar.gz {apps,packages,tools}/*/package.json common/{config,scripts} package.json rush.json
-
-buildRoot: copyManifest
-	docker build -t vdtn359/news-root .
-	rm -rf manifest.tar.gz
-
-buildRoot:
-	docker build -t vdtn359/news-ci .
+buildProdImage:
+	docker build -t vdtn359/news-prod -f Dockerfile.prod .
 
 buildPacker:
 	export DIGITALOCEAN_TOKEN=$(shell secrethub read vdtn359/start/vdtn359-news/digitalocean-token); \
@@ -46,11 +39,14 @@ playbook:
 pushCI: buildCI
 	docker push vdtn359/news-ci
 
+pushProdImage: buildProdImage
+	docker push vdtn359/news-ci
+
 buildWorker:
-	cd apps/worker && ./deploy.sh
+	./apps/worker/deploy.sh
 
 buildWeb:
-	cd apps/web && ./deploy.sh
+	./apps/web/deploy.sh
 
 releaseWorker:
 	heroku container:release -a vdtn359-news worker

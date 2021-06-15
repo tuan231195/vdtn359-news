@@ -1,17 +1,15 @@
-FROM vdtn359/news-ci AS build
+FROM vdtn359/news-prod
 
-WORKDIR /opt/app
-ADD . /opt/app
-RUN cd /opt/app/produles && pnpm recursive install --prod --frozen-lockfile=false
+ENV APP_DIR /opt
 
-FROM node:12-alpine AS prod
+WORKDIR "${APP_DIR}"
 
-WORKDIR /opt/app
-RUN mkdir -p /opt/app
-COPY --from=build /opt/app/produles/node_modules /opt/app/node_modules
-COPY --from=build /opt/app/.next /opt/app/.next
-COPY --from=build /opt/app/public /opt/app/public
-COPY --from=build /opt/app/produles/package.json /opt/app/package.json
+COPY ["common/artifacts/news-web.zip", "${APP_DIR}/"]
+
+RUN unzip -qo news-worker.zip && rm news-worker.zip
+
+WORKDIR "${APP_DIR}"/apps/worker
+
 ENV NODE_ENV production
-CMD ["npm", "start"]
 
+CMD ["npm", "start"]
