@@ -1,0 +1,11 @@
+{
+    "changes": [
+        {
+            "packageName": "@vdtn359/news-worker",
+            "comment": "rush rewrite",
+            "type": "minor"
+        }
+    ],
+    "packageName": "@vdtn359/news-worker",
+    "email": "vdtn359@gmail.com"
+}
