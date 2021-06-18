@@ -1,0 +1,82 @@
+version: 2.1
+orbs:
+    secrethub: secrethub/cli@1.1.0
+jobs:
+    build_and_test:
+        working_directory: ~/app
+        docker:
+            -   image: vdtn359/news-ci
+        steps:
+            - secrethub/install
+            - checkout
+            -   restore_cache:
+                    key: dependency-cache-{{ checksum "common/config/pnpm-lock.yaml" }}
+            -   run:
+                    name: Install node_modules
+                    command: |
+                        node common/scripts/install-run-rush.js install
+            -   save_cache:
+                    key: dependency-cache-{{ checksum "common/config/pnpm-lock.yaml" }}
+                    paths:
+                        - common/temp/pnpm-store
+            -   run:
+                    name: Test
+                    command: node common/scripts/install-run-rush.js test
+            -   run:
+                    name: Build
+                    command: node common/scripts/install-run-rush.js build
+            -   persist_to_workspace:
+                    root: .
+                    paths:
+                        - .
+    release:
+        working_directory: ~/app
+        docker:
+            -   image: vdtn359/news-ci
+        environment:
+            AWS_REGION: ap-southeast-2
+            AWS_ACCESS_KEY_ID: secrethub://vdtn359/start/vdtn359-news/aws-access-key-id
+            AWS_SECRET_ACCESS_KEY: secrethub://vdtn359/start/vdtn359-news/aws-secret-access-key
+            NPM_TOKEN: secrethub://vdtn359/start/vdtn359-news/npm-token
+            GH_TOKEN: secrethub://vdtn359/start/vdtn359-news/github-token
+        steps:
+            - secrethub/install
+            - checkout
+            -   secrethub/exec:
+                    step-name: Authenticate with registry
+                    command: |
+                        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+                        npm config set access public
+                        mkdir -p ~/.ssh
+                        ssh-keygen -F github.com || ssh-keyscan github.com >> ~/.ssh/known_hosts
+            -   attach_workspace:
+                    at: .
+            -   secrethub/exec:
+                    step-name: Release packages
+                    command: rush publish -p -a
+            -   secrethub/exec:
+                    step-name: Deploy crawler
+                    command: make releaseCrawler
+            -   secrethub/exec:
+                    step-name: Deploy scheduler
+                    command: make releaseScheduler
+            -   setup_remote_docker:
+                    version: 19.03.13
+            -   secrethub/exec:
+                    step-name: Deploy web
+                    command: make releaseWeb
+            -   secrethub/exec:
+                    step-name: Deploy worker
+                    command: make releaseWorker
+workflows:
+    version: 2
+    build_and_test:
+        jobs:
+            - build_and_test
+            -   release:
+                    requires:
+                        - build_and_test
+                    filters:
+                        branches:
+                            only:
+                                - release
