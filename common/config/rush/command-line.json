@@ -27,6 +27,26 @@
             "safeForSimultaneousRushProcesses": true,
             "autoinstallerName": "deploy-tools",
             "shellCommand": "rush-deploy-utils"
+        },
+        {
+            "commandKind": "bulk",
+            "name": "build",
+            "summary": "Build all projects that haven't been built, or have changed since they were last built",
+            "safeForSimultaneousRushProcesses": false,
+            "enableParallelism": true,
+            "ignoreDependencyOrder": false,
+            "ignoreMissingScript": false,
+            "allowWarningsInSuccessfulBuild": true
+        },
+        {
+            "commandKind": "bulk",
+            "name": "rebuild",
+            "summary": "Clean and rebuild the entire set of projects",
+            "safeForSimultaneousRushProcesses": false,
+            "enableParallelism": true,
+            "ignoreDependencyOrder": false,
+            "ignoreMissingScript": false,
+            "allowWarningsInSuccessfulBuild": true
         }
     ],
     "parameters": [

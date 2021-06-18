@@ -10,21 +10,21 @@ jobs:
             - secrethub/install
             - checkout
             -   restore_cache:
-                    key: dependency-cache-{{ checksum "common/config/pnpm-lock.yaml" }}
+                    key: dependency-cache-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
             -   run:
                     name: Install node_modules
                     command: |
                         node common/scripts/install-run-rush.js install
             -   save_cache:
-                    key: dependency-cache-{{ checksum "common/config/pnpm-lock.yaml" }}
+                    key: dependency-cache-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
                     paths:
                         - common/temp/pnpm-store
             -   run:
-                    name: Test
-                    command: node common/scripts/install-run-rush.js test
-            -   run:
                     name: Build
                     command: node common/scripts/install-run-rush.js build
+            -   run:
+                    name: Test
+                    command: node common/scripts/install-run-rush.js test
             -   persist_to_workspace:
                     root: .
                     paths:
@@ -53,15 +53,14 @@ jobs:
                     at: .
             -   secrethub/exec:
                     step-name: Release packages
-                    command: rush publish -p -a
+                    command: rush publish -p -a --add-commit-details --include-all
             -   secrethub/exec:
                     step-name: Deploy crawler
                     command: make releaseCrawler
             -   secrethub/exec:
                     step-name: Deploy scheduler
                     command: make releaseScheduler
-            -   setup_remote_docker:
-                    version: 19.03.13
+            - setup_remote_docker
             -   secrethub/exec:
                     step-name: Deploy web
                     command: make releaseWeb
