@@ -1,0 +1,44 @@
+{
+    "variables": {
+        "token": "{{env `DIGITALOCEAN_TOKEN`}}",
+        "image_name": "vdtn359-news-{{timestamp}}"
+    },
+    "builders": [
+        {
+            "type": "digitalocean",
+            "api_token": "{{user `token`}}",
+            "image": "ubuntu-18-04-x64",
+            "region": "sgp1",
+            "size": "s-1vcpu-1gb",
+            "ssh_username": "root",
+            "snapshot_name": "{{user `image_name`}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": ["cloud-init status --wait", "apt-get -qqy update"]
+        },
+        {
+            "type": "shell",
+            "scripts": ["scripts/01-setup-user.sh", "scripts/02-docker.sh"]
+        },
+        {
+            "type": "file",
+            "source": "files/vdtn359_do_key.pub",
+            "destination": "/tmp/vdtn359_do_key.pub"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "mkdir -p /home/vdtn359/.ssh",
+                "touch /home/vdtn359/.ssh/authorized_keys",
+                "cat /tmp/vdtn359_do_key.pub >> /home/vdtn359/.ssh/authorized_keys",
+                "chown vdtn359:vdtn359 /home/vdtn359/.ssh",
+                "chown vdtn359:vdtn359 /home/vdtn359/.ssh/authorized_keys",
+                "chmod 700 /home/vdtn359/.ssh",
+                "chmod 600 /home/vdtn359/.ssh/authorized_keys"
+            ]
+        }
+    ]
+}

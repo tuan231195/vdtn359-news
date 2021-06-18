@@ -83,8 +83,7 @@ const nextConfig = withPlugins([
 
 					if (!isDevelopment && process.env.SOURCEMAP) {
 						config.devtool = 'source-map';
-						const { SENTRY_DSN, SENTRY_ORG, SENTRY_PROJECT } =
-							process.env;
+						const { SENTRY_DSN } = process.env;
 
 						for (const plugin of config.plugins) {
 							if (plugin.constructor.name === 'UglifyJsPlugin') {
@@ -108,7 +107,7 @@ const nextConfig = withPlugins([
 							}
 						}
 
-						if (SENTRY_DSN && SENTRY_ORG && SENTRY_PROJECT) {
+						if (SENTRY_DSN) {
 							config.plugins.push(
 								new SentryWebpackPlugin({
 									include: '.next',

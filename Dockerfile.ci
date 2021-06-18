@@ -1,5 +1,5 @@
 FROM node:14-alpine
-ENV TERRAFORM_VERSION=0.12.20
+ENV TERRAFORM_VERSION=0.13.7
 
 RUN apk update && apk upgrade && \
     apk add --no-cache bash wget git openssh curl jq make zip

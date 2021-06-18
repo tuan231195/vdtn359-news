@@ -1,0 +1,36 @@
+---
+- name: Install required system packages
+  apt: name={{ item }} state=latest update_cache=yes
+  loop:
+      [
+          'apt-transport-https',
+          'ca-certificates',
+          'curl',
+          'python3-passlib',
+          'nginx',
+          'software-properties-common',
+          'python3-pip',
+          'python3-setuptools',
+      ]
+
+- name: Get node
+  shell: curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+- name: Install node and npm
+  apt:
+      name: nodejs
+      state: latest
+
+- name: Version of Node and NPM
+  shell: 'npm -v && node -v'
+  register: nodeversioninfo
+
+- name: Version Info
+  debug:
+      msg: 'Version info {{ nodeversioninfo.stdout_lines }}'
+  when: nodeversioninfo is changed
+
+- name: Start nginx
+  service:
+      name: nginx
+      state: started

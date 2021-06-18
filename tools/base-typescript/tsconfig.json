@@ -15,6 +15,8 @@
         "downlevelIteration": true,
         "noImplicitAny": false,
         "strict": true,
+        "allowJs": true,
+        "checkJs": false,
         "strictNullChecks": false,
         "strictPropertyInitialization": false,
         "sourceMap": true,

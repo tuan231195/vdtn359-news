@@ -4,7 +4,7 @@ specifiers:
   '@vdtn359/rush-deploy-utils': latest
 
 dependencies:
-  '@vdtn359/rush-deploy-utils': 1.0.0
+  '@vdtn359/rush-deploy-utils': 1.0.1
 
 packages:
 
@@ -518,8 +518,8 @@ packages:
       '@types/node': 15.12.2
     dev: false
 
-  /@vdtn359/rush-deploy-utils/1.0.0:
-    resolution: {integrity: sha512-768MX9jPXAvN4Ccfp1q4iDx2eVO8yYhS4ClWwBzRFHllmQpICiWnFe7Clu4By8aAXwobdSaPM5ySwhji19hNVw==}
+  /@vdtn359/rush-deploy-utils/1.0.1:
+    resolution: {integrity: sha512-74HLhPM49+VRKGq2glsSkrks2Co/9BAq46DaPN4xWVAdc2gQOjTR00WOQaa+tEVmMg2UlT9Enj2rGJW716/Fsw==}
     hasBin: true
     requiresBuild: true
     dependencies:

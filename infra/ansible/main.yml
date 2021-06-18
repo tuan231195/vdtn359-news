@@ -1,0 +1,16 @@
+---
+- hosts: digitalocean
+  vars:
+      ansible_python_interpreter: /usr/bin/python3
+      secrethub_path:  "vdtn359/start/vdtn359-news"
+  roles:
+      - { role: apt, become: yes, tags: apt }
+      - { role: nginx, become: yes, tags: nginx }
+  tasks:
+      - import_role:
+            name: elastic.elasticsearch
+        tags: es
+        vars:
+            es_heap_size: 350m
+            es_config:
+                discovery.type: single-node

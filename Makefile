@@ -27,12 +27,6 @@ provisionHeroku:
 	terraform init; \
 	terraform apply -auto-approve
 
-provisionCrawler:
-	cd apps/crawler && ./deploy.sh
-
-provisionScheduler:
-	cd apps/scheduler && ./deploy.sh
-
 playbook:
 	cd infra/ansible && ansible-playbook -v main.yml $(ansible_opts)
 
@@ -40,16 +34,16 @@ pushCI: buildCI
 	docker push vdtn359/news-ci
 
 pushProdImage: buildProdImage
-	docker push vdtn359/news-ci
+	docker push vdtn359/news-prod
 
-buildWorker:
-	./apps/worker/deploy.sh
+releaseCrawler:
+	rush deploy-tools -a deploy -p @vdtn359/news-crawler
 
-buildWeb:
-	./apps/web/deploy.sh
+releaseScheduler:
+	rush deploy-tools -a deploy -p @vdtn359/news-scheduler
 
 releaseWorker:
-	heroku container:release -a vdtn359-news worker
+	rush deploy-tools -a deploy -p @vdtn359/news-worker
 
 releaseWeb:
-	heroku container:release -a vdtn359-news web
+	rush deploy-tools -a deploy -p @vdtn359/news-web

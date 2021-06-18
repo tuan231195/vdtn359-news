@@ -1,0 +1,8 @@
+digitalocean:
+    hosts:
+        ubuntu:
+            ansible_port: 22
+            ansible_host: do.vdtn359.com
+            ansible_connection: ssh
+            ansible_user: vdtn359
+            ansible_ssh_private_key_file: ~/.ssh/vdtn359_do_key

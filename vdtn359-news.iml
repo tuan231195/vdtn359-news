@@ -6,6 +6,8 @@
       <excludeFolder url="file://$MODULE_DIR$/common/temp/pnpm-store" />
       <excludeFolder url="file://$MODULE_DIR$/common/temp" />
       <excludeFolder url="file://$MODULE_DIR$/common/deploy" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/crawler/terraform/.terraform" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/scheduler/terraform/.terraform" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -48,7 +48,7 @@ const configMap = {
 		url: 'https://www.vdtn359.com',
 		db: {
 			clientEmail:
-				'firebase-adminsdk-9k17b@vdtn359-news-prod.iam.gserviceaccount.com',
+				'firebase-adminsdk-zer3e@vdtn359-news-prod.iam.gserviceaccount.com',
 			projectId: 'vdtn359-news-prod',
 			privateKey: process.env.FIREBASE_PRIVATE_KEY,
 		},

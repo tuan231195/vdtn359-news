@@ -6,7 +6,7 @@ provider "secrethub" {
 }
 
 data "secrethub_secret" "sentry_dsn" {
-  path = "${local.secrethub_dir}/sentry"
+  path = "${local.secrethub_dir}/sentry-crawler"
 }
 
 data "secrethub_secret" "firebase_private_key" {

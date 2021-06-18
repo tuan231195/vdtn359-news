@@ -1,0 +1,23 @@
+- name: Load es_password
+  local_action: command secrethub read "{{ secrethub_path }}"/es-password
+  register: es_password
+  become: no
+- name: Disable default servers
+  file:
+      path=/etc/nginx/conf.d/{{ item.path }}
+      state=absent
+  with_items:
+      - { path: 'default.conf' }
+      - { path: 'example_ssl.conf' }
+
+- name: Password protect elastic cluster
+  htpasswd: path=/etc/nginx/conf.d/es_passwd name={{ item.username }} password={{ item.password }}
+  with_items:
+      - username: vdtn359
+        password: "{{ es_password.stdout }}"
+
+- name: Upload nginx config
+  template: src={{ item }} dest=/etc/nginx/conf.d/{{item}}.conf
+  with_items:
+      - es-lb
+  notify: Restart nginx
