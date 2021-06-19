@@ -1,6 +1,6 @@
 {
     "name": "@vdtn359/news-crawler",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "private": true,
     "description": "news crawler",
     "scripts": {

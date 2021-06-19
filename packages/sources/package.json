@@ -1,6 +1,6 @@
 {
     "name": "@vdtn359/news-sources",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "description": "news sources",
     "types": "dist/index.d.ts",
     "main": "dist/index.js",
