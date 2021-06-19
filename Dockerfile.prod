@@ -1,4 +1,3 @@
-FROM node:14-alpine
+FROM node:14-stretch-slim
 
-RUN apk update && \
-    apk add --no-cache zip
+RUN apt-get update && apt-get install -y unzip

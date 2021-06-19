@@ -1,18 +1,19 @@
-FROM node:14-alpine
+FROM node:14-stretch-slim
 ENV TERRAFORM_VERSION=0.13.7
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash wget git openssh curl jq make zip
+RUN apt-get update
+RUN apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+RUN echo "deb [trusted=yes] https://apt.secrethub.io stable main" > /etc/apt/sources.list.d/secrethub.sources.list
+RUN apt-get update && apt-get install -y bash wget git jq make zip rsync docker-ce-cli secrethub-cli
 
 RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
-RUN apk add --repository https://alpine.secrethub.io/alpine/edge/main --allow-untrusted secrethub-cli
 RUN mkdir -p ~/.terraform.d/plugins && curl -SfL https://github.com/secrethub/terraform-provider-secrethub/releases/latest/download/terraform-provider-secrethub-linux-amd64.tar.gz | tar zxf - -C ~/.terraform.d/plugins
 
-RUN apk add python3 py3-pip
+RUN apt-get install -y python3 python3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip3 install awscli
-
-RUN apk add --no-cache rsync docker-cli

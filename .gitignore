@@ -265,3 +265,6 @@ common/autoinstallers/*/.npmrc
 # Common toolchain intermediate files
 temp
 common/artifacts
+
+apps/web/public/service-worker.js
+apps/web/public/workbox-*.js

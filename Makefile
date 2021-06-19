@@ -49,7 +49,4 @@ releaseWeb:
 	node common/scripts/install-run-rush.js deploy-tools -a deploy -p @vdtn359/news-web
 
 commitHashes:
-	git pull origin --rebase
-	git add **/build-hash.info
-	git commit -m 'chore(build): update build hashes [skip ci]' | exit 0
-	git push origin
+	. ./common/scripts/commit-hashes.sh
