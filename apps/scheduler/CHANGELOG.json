@@ -1,0 +1,31 @@
+{
+  "name": "@vdtn359/news-scheduler",
+  "entries": [
+    {
+      "version": "1.3.0",
+      "tag": "@vdtn359/news-scheduler_v1.3.0",
+      "date": "Sat, 19 Jun 2021 04:46:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "rush rewrite"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@vdtn359/news-core\" to `1.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@vdtn359/news-schema\" to `1.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@vdtn359/news-search\" to `1.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@vdtn359/news-utils\" to `1.2.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

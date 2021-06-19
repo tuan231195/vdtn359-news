@@ -1,0 +1,17 @@
+{
+  "name": "@vdtn359/news-utils",
+  "entries": [
+    {
+      "version": "1.2.0",
+      "tag": "@vdtn359/news-utils_v1.2.0",
+      "date": "Sat, 19 Jun 2021 04:46:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "rush rewrite"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@vdtn359/news-core",
+  "entries": [
+    {
+      "version": "1.3.0",
+      "tag": "@vdtn359/news-core_v1.3.0",
+      "date": "Sat, 19 Jun 2021 04:46:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "rush rewrite"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@vdtn359/news-utils\" to `1.2.0`"
+          }
+        ]
+      }
+    }
+  ]
+}
