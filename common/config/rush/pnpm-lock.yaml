@@ -303,7 +303,6 @@ importers:
       rxjs: 6.5.5
       source-map-support: ^0.5.19
       ts-node: 8.10.2
-      ttypescript: 1.5.10
       webpack: 4.42.1
       winston: 3.2.1
     dependencies:
@@ -328,14 +327,13 @@ importers:
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
       ts-node: 8.10.2
-      ttypescript: 1.5.10_ts-node@8.10.2
       webpack: 4.42.1
 
   ../../packages/core:
     specifiers:
-      '@types/jest': ~26.0.23
+      '@types/jest': ^26.0.23
       '@types/lodash': 4.14.150
-      '@types/node': ~15.9.0
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       '@vdtn359/news-utils': workspace:*
@@ -351,15 +349,15 @@ importers:
     devDependencies:
       '@types/jest': 26.0.23
       '@types/lodash': 4.14.150
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
       ts-node: 8.10.2
 
   ../../packages/models:
     specifiers:
-      '@types/jest': ~26.0.23
-      '@types/node': ~15.9.0
+      '@types/jest': ^26.0.23
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       '@vdtn359/news-utils': workspace:*
@@ -367,7 +365,7 @@ importers:
       '@vdtn359/news-utils': link:../utils
     devDependencies:
       '@types/jest': 26.0.23
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
 
@@ -375,8 +373,8 @@ importers:
     specifiers:
       '@types/bluebird': 3.5.30
       '@types/ioredis': 4.16.1
-      '@types/jest': ~26.0.23
-      '@types/node': ~15.9.0
+      '@types/jest': ^26.0.23
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       '@vdtn359/news-core': workspace:*
@@ -402,15 +400,15 @@ importers:
       '@types/bluebird': 3.5.30
       '@types/ioredis': 4.16.1
       '@types/jest': 26.0.23
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
 
   ../../packages/search:
     specifiers:
       '@elastic/elasticsearch': 7.6.1
-      '@types/jest': ~26.0.23
-      '@types/node': ~15.9.0
+      '@types/jest': ^26.0.23
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       '@vdtn359/news-models': workspace:*
@@ -425,16 +423,16 @@ importers:
       lodash: 4.17.15
     devDependencies:
       '@types/jest': 26.0.23
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
 
   ../../packages/sources:
     specifiers:
       '@types/cheerio': ^0.22.29
-      '@types/jest': ~26.0.23
+      '@types/jest': ^26.0.23
       '@types/jsdom': ^16.2.11
-      '@types/node': ~15.9.0
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       '@vdtn359/news-models': workspace:*
@@ -462,23 +460,23 @@ importers:
       '@types/cheerio': 0.22.29
       '@types/jest': 26.0.23
       '@types/jsdom': 16.2.11
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
 
   ../../packages/styles:
     specifiers:
-      '@types/jest': ~26.0.23
-      '@types/node': ~15.9.0
+      '@types/jest': ^26.0.23
+      '@types/node': ^15.12.2
     devDependencies:
       '@types/jest': 26.0.23
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
 
   ../../packages/utils:
     specifiers:
-      '@types/jest': ~26.0.23
+      '@types/jest': ^26.0.23
       '@types/lodash': 4.14.150
-      '@types/node': ~15.9.0
+      '@types/node': ^15.12.2
       '@vdtn359/base-typescript': workspace:*
       '@vdtn359/eslint-config': workspace:*
       date-fns: 2.13.0
@@ -493,7 +491,7 @@ importers:
     devDependencies:
       '@types/jest': 26.0.23
       '@types/lodash': 4.14.150
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       '@vdtn359/base-typescript': link:../../tools/base-typescript
       '@vdtn359/eslint-config': link:../../tools/eslint-config
 
@@ -4108,7 +4106,7 @@ packages:
   /@types/fs-extra/8.1.1:
     resolution: {integrity: sha512-TcUlBem321DFQzBNuz8p0CLLKp0VvF/XH9E4KHNmgwyp4E3AfgI5cjiIVZWlbfThBop2qxFIh4+LeY6hVWWZ2w==}
     dependencies:
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
     dev: false
     optional: true
 
@@ -4147,7 +4145,7 @@ packages:
   /@types/ioredis/4.16.1:
     resolution: {integrity: sha512-3O4gHSxQ4C0AhJVHIW4TFYsv0OqORLmiu5mgceciJrPct/ToTwRehroLU3vw5evzQgemdKx05dU6nKs5bCN1bQ==}
     dependencies:
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
     dev: true
 
   /@types/istanbul-lib-coverage/2.0.3:
@@ -4232,9 +4230,6 @@ packages:
 
   /@types/node/15.12.2:
     resolution: {integrity: sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==}
-
-  /@types/node/15.9.0:
-    resolution: {integrity: sha512-AR1Vq1Ei1GaA5FjKL5PBqblTZsL5M+monvGSZwe6sSIdGiuu7Xr/pNwWJY+0ZQuN8AapD/XMB5IzBAyYRFbocA==}
 
   /@types/node/8.10.66:
     resolution: {integrity: sha512-tktOkFUA4kXx2hhhrB8bIFb5TbwzS4uOhKEmwiD+NoiL0qtP2OQ9mFldbgD4dV1djrlBYP6eBuQZiWjuHUpqFw==}
@@ -12250,7 +12245,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.1
-      '@types/node': 15.9.0
+      '@types/node': 15.12.2
       long: 4.0.0
     dev: false
     optional: true
@@ -14322,17 +14317,6 @@ packages:
 
   /tty-browserify/0.0.0:
     resolution: {integrity: sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=}
-
-  /ttypescript/1.5.10_ts-node@8.10.2:
-    resolution: {integrity: sha512-Hk7TRej1hM+p+Fo+Pyb/XK9pe9CAt3Sh5n5YRutxFS8hUgkh2u1Vd2K40kMcNP3WYhiVFBMqXwM/2E8O95Ep6g==}
-    hasBin: true
-    peerDependencies:
-      ts-node: ^8.0.2
-      typescript: ^3.2.2
-    dependencies:
-      resolve: 1.20.0
-      ts-node: 8.10.2
-    dev: true
 
   /ttypescript/1.5.12_typescript@4.3.2:
     resolution: {integrity: sha512-1ojRyJvpnmgN9kIHmUnQPlEV1gq+VVsxVYjk/NfvMlHSmYxjK5hEvOOU2MQASrbekTUiUM7pR/nXeCc8bzvMOQ==}

@@ -12,6 +12,10 @@ jobs:
             -   restore_cache:
                     key: dependency-cache-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
             -   run:
+                    name: Rush check
+                    command: |
+                        node common/scripts/install-run-rush.js check
+            -   run:
                     name: Install node_modules
                     command: |
                         node common/scripts/install-run-rush.js install

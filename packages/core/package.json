@@ -20,8 +20,8 @@
     "devDependencies": {
         "ts-node": "8.10.2",
         "@types/lodash": "4.14.150",
-        "@types/node": "~15.9.0",
-        "@types/jest": "~26.0.23",
+        "@types/node": "^15.12.2",
+        "@types/jest": "^26.0.23",
         "@vdtn359/base-typescript": "workspace:*",
         "@vdtn359/eslint-config": "workspace:*"
     }

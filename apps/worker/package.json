@@ -40,7 +40,6 @@
         "@vdtn359/base-typescript": "workspace:*",
         "@vdtn359/eslint-config": "workspace:*",
         "ts-node": "8.10.2",
-        "ttypescript": "1.5.10",
         "webpack": "4.42.1"
     }
 }
