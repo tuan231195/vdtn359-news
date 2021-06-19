@@ -23,16 +23,23 @@ jobs:
                     key: dependency-cache-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
                     paths:
                         - common/temp/pnpm-store
+            -   restore_cache:
+                    key: next-cache
             -   run:
                     name: Build
                     command: node common/scripts/install-run-rush.js build
+            -   save_cache:
+                    key: next-cache
+                    paths:
+                        - apps/web/.next/cache
             -   run:
                     name: Test
                     command: node common/scripts/install-run-rush.js test
             -   persist_to_workspace:
-                    root: .
+                    root: /root
                     paths:
-                        - .
+                        - app
+                        - .rush
     release:
         working_directory: ~/app
         docker:
@@ -43,21 +50,27 @@ jobs:
             AWS_SECRET_ACCESS_KEY: secrethub://vdtn359/start/vdtn359-news/aws-secret-access-key
             NPM_TOKEN: secrethub://vdtn359/start/vdtn359-news/npm-token
             GH_TOKEN: secrethub://vdtn359/start/vdtn359-news/github-token
+            DOCKER_PASS: secrethub://vdtn359/start/vdtn359-news/docker-pass
+            DOCKER_USER: secrethub://vdtn359/start/vdtn359-news/docker-user
         steps:
             - secrethub/install
-            - checkout
+            -   attach_workspace:
+                    at: /root
+            -   add_ssh_keys:
+                    fingerprints:
+                        - "12:17:e9:d6:19:9d:77:be:d1:bd:d9:0a:e2:f9:7e:b7"
             -   secrethub/exec:
-                    step-name: Authenticate with registry
+                    step-name: Configure user
                     command: |
-                        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-                        npm config set access public
+                        git config user.email vdtn359@gmail.com
+                        git config user.name "Tuan Nguyen"
                         mkdir -p ~/.ssh
                         ssh-keygen -F github.com || ssh-keyscan github.com >> ~/.ssh/known_hosts
-            -   attach_workspace:
-                    at: .
             -   secrethub/exec:
                     step-name: Release packages
-                    command: rush publish -p -a --add-commit-details --include-all
+                    command: |
+                        node common/scripts/install-run-rush.js version --bump --target-branch release --ignore-git-hooks
+                        node common/scripts/install-run-rush.js publish -p -a --add-commit-details --include-all --target-branch release
             -   secrethub/exec:
                     step-name: Deploy crawler
                     command: make releaseCrawler
@@ -65,6 +78,12 @@ jobs:
                     step-name: Deploy scheduler
                     command: make releaseScheduler
             - setup_remote_docker
+            -   secrethub/exec:
+                    step-name: Prepare credentails
+                    command: |
+                        echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+                        curl https://cli-assets.heroku.com/install.sh | sh
+                        heroku container:login
             -   secrethub/exec:
                     step-name: Deploy web
                     command: make releaseWeb

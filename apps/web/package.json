@@ -5,7 +5,7 @@
     "description": "news web application",
     "scripts": {
         "build": "secrethub run --no-prompt -- npm run build:next",
-        "build:next": "rm -rf .next && next build",
+        "build:next": "next build",
         "dev:start": "LOCAL=1 next dev",
         "start": "next start -p $PORT",
         "test": "jest"

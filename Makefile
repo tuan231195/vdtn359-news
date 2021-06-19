@@ -37,13 +37,19 @@ pushProdImage: buildProdImage
 	docker push vdtn359/news-prod
 
 releaseCrawler:
-	rush deploy-tools -a deploy -p @vdtn359/news-crawler
+	node common/scripts/install-run-rush.js deploy-tools -a deploy -p @vdtn359/news-crawler
 
 releaseScheduler:
-	rush deploy-tools -a deploy -p @vdtn359/news-scheduler
+	node common/scripts/install-run-rush.js deploy-tools -a deploy -p @vdtn359/news-scheduler
 
 releaseWorker:
-	rush deploy-tools -a deploy -p @vdtn359/news-worker
+	node common/scripts/install-run-rush.js deploy-tools -a deploy -p @vdtn359/news-worker
 
 releaseWeb:
-	rush deploy-tools -a deploy -p @vdtn359/news-web
+	node common/scripts/install-run-rush.js deploy-tools -a deploy -p @vdtn359/news-web
+
+commitHashes:
+	git pull origin --rebase
+	git add **/build-hash.info
+	git commit -m 'chore(build): update build hashes [skip ci]' | exit 0
+	git push origin
