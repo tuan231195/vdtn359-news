@@ -14,3 +14,5 @@ RUN mkdir -p ~/.terraform.d/plugins && curl -SfL https://github.com/secrethub/te
 RUN apk add python3 py3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip3 install awscli
+
+RUN apk add --no-cache rsync docker-cli

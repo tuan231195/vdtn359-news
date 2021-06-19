@@ -52,6 +52,7 @@ jobs:
             GH_TOKEN: secrethub://vdtn359/start/vdtn359-news/github-token
             DOCKER_PASS: secrethub://vdtn359/start/vdtn359-news/docker-pass
             DOCKER_USER: secrethub://vdtn359/start/vdtn359-news/docker-user
+            HEROKU_API_KEY: secrethub://vdtn359/start/vdtn359-news/heroku-token
         steps:
             - secrethub/install
             -   attach_workspace:
@@ -70,7 +71,7 @@ jobs:
                     step-name: Release packages
                     command: |
                         node common/scripts/install-run-rush.js version --bump --target-branch release --ignore-git-hooks
-                        node common/scripts/install-run-rush.js publish -p -a --add-commit-details --include-all --target-branch release
+                        node common/scripts/install-run-rush.js publish -p --include-all --version-policy packageVersion --target-branch release
             -   secrethub/exec:
                     step-name: Deploy crawler
                     command: make releaseCrawler

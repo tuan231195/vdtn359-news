@@ -428,36 +428,43 @@
         {
             "packageName": "@vdtn359/news-utils",
             "projectFolder": "packages/utils",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-styles",
             "projectFolder": "packages/styles",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-core",
             "projectFolder": "packages/core",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-models",
             "projectFolder": "packages/models",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-schema",
             "projectFolder": "packages/schema",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-sources",
             "projectFolder": "packages/sources",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {
             "packageName": "@vdtn359/news-search",
             "projectFolder": "packages/search",
+            "versionPolicyName": "packageVersion",
             "shouldPublish": true
         },
         {

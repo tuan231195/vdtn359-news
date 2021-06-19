@@ -2,5 +2,9 @@
     {
         "definitionName": "individualVersion",
         "policyName": "appVersion"
+    },
+    {
+        "definitionName": "individualVersion",
+        "policyName": "packageVersion"
     }
 ]
