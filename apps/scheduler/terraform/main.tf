@@ -36,7 +36,6 @@ module "lambda" {
             NODE_CONFIG_ENV = "production"
             ES_USERNAME = "vdtn359"
             ES_PASSWORD = data.secrethub_secret.es_password.value
-            SENTRY_REPORTING_DSN = data.secrethub_secret.sentry_dsn.value
             FIREBASE_PRIVATE_KEY = data.secrethub_secret.firebase_private_key.value
             LOGZ_TOKEN = data.secrethub_secret.logz_token.value
             REDIS_PASSWORD = data.secrethub_secret.redis_password.value

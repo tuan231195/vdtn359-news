@@ -5,10 +5,6 @@ locals {
 provider "secrethub" {
 }
 
-data "secrethub_secret" "sentry_dsn" {
-  path = "${local.secrethub_dir}/sentry"
-}
-
 data "secrethub_secret" "firebase_private_key" {
   path = "${local.secrethub_dir}/firebase"
 }
